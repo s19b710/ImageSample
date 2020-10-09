@@ -12,7 +12,9 @@ import android.graphics.Paint.Style;
 import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.View;
-
+/**
+hirata tantou
+*/
 public class CustomView2 extends View {
     private Context context;
 
