@@ -22,10 +22,11 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <jp.ac.shohoku.aporochoco.PictureView
+        <jp.ac.shohoku.aporochoco.TapView
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            tools:ignore="MissingClass" />
 
 
 
