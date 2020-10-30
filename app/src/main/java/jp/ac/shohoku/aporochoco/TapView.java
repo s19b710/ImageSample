@@ -1,6 +1,6 @@
 package jp.ac.shohoku.aporochoco;
 
-        import android.content.Context;
+ import android.content.Context;
  import android.content.res.Resources;
  import android.graphics.Bitmap;
  import android.graphics.BitmapFactory;
@@ -16,7 +16,9 @@ package jp.ac.shohoku.aporochoco;
   */
          public class TapView extends View {
  private Paint mPaint = new Paint(); //描画用のスタイル設定など
- private Bitmap mBmp = null; //表示用の Bitmap
+ private Bitmap mBmp1 = null; //表示用の Bitmap
+ private Bitmap mBmp2 = null;
+ private Bitmap mBmp3 = null;
  private int mTop, mLeft, mW, mH; //画像の幅と高さ
 
          /**
@@ -25,13 +27,17 @@ package jp.ac.shohoku.aporochoco;
   * @param attrs
   */
          public TapView(Context context, AttributeSet attrs) {
-         super(context, attrs);
-         Resources rs = this.getResources(); //リソースを取得 (R クラスから取得)
-         mBmp = BitmapFactory.decodeResource(rs, R.drawable.azisai); //リソースから画像を取得
-         mTop = 100;
-         mLeft = 100;
-         mW = mBmp.getWidth();
-         mH = mBmp.getHeight();
+             super(context, attrs);
+             Resources rs = this.getResources(); //リソースを取得 (R クラスから取得)
+             mBmp1 = BitmapFactory.decodeResource(rs, R.drawable.azisai); //リソースから画像を取得
+             mBmp2 = BitmapFactory.decodeResource(rs, R.drawable.umi); //リソースから画像を取得
+             mBmp3 = BitmapFactory.decodeResource(rs, R.drawable.batinki); //リソースから画像を取得
+             mTop = 100;
+             mLeft = 100;
+         mW = mBmp1.getWidth();
+         mH = mBmp2.getHeight();
+         mH = mBmp3.getHeight();
+
          }
 
          /**
@@ -39,11 +45,9 @@ package jp.ac.shohoku.aporochoco;
   *
   * @param canvas 画像表示用のキャンバス
   */
-         protected void onDraw(Canvas canvas) {
-         super.onDraw(canvas);
-         canvas.drawColor(Color.WHITE);
-         canvas.drawBitmap(mBmp, mLeft, mTop, mPaint);
-         }
+
+
+
 
          /*
  * タップされたときに実行されるメソッド<br />
